@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<div style="width: 25%; height: 120px; background: coral; margin: auto">
+    <div id="inputIndex" style="height: 45%; padding-top: 5px; padding-left: 5px">
+        Nhập cân nặng <input type="number" id="weight" style="padding-right: 5px">(đơn vị kg) <br>
+        Nhập chiều cao <input type="number" id="height" style="padding-right: 5px">( đơn vị mét) <br>
+    </div>
+    <div id="output" style="float: bottom; padding-left: 5px">
+        <button type="button" onclick="calcB()">Tính BMI</button>
+        <input type="text" id="outputBMI">
+    </div>
+
+</div>
+<script>
+    function calcB() {
+        let weight = parseFloat(document.getElementById('weight').value);
+        let height = parseFloat(document.getElementById('height').value);
+        let calcbmi = weight/(height*height);
+        if (calcbmi<18.5) {
+            console.log(calcbmi);
+            document.getElementById('outputBMI').value = "Bạn quá gầy";
+        } else if (calcbmi<25) {
+            document.getElementById('outputBMI').value = "Bạn bình thường";
+        } else if (calcbmi<30) {
+            document.getElementById('outputBMI').innerText = "Bạn hơi thừa cân";
+
+        } else {
+            document.getElementById('outputBMI').innerText = "Bạn quá béo";
+        }
+
+    }
+</script>
+</body>
+</html>
