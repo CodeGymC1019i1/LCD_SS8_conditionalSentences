@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee login</title>
+</head>
+<body>
+<script>
+    let login = prompt('Who are you? ')
+    let message = (login == 'Employee') ?
+        'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+            (login == '') ?
+                'No login' :
+                'Who are you?';
+    alert(message);
+
+</script>
+</body>
+</html>
