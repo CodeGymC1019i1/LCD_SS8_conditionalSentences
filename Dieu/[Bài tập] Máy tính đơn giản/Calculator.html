@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <script src="Calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" value="" id="screen" placeholder="0">
+        <br/>
+        <button onclick="sin()">sin</button>
+        <button onclick="sqrtNumber()">sqrt</button>
+        <button value="(" onclick="addToScreen(this.value)">(</button>
+        <button value=")" onclick="addToScreen(this.value)">)</button>
+        <button onclick="clearScreen()">C</button>
+        <button value="<--" onclick="backSpace()"><--</button>
+        <br/>
+        <button onclick="cos()">cos</button>
+        <button onclick="squaNumber()">x<sup>2</sup></button>
+        <button value="1" onclick="addToScreen(this.value)">1</button>
+        <button value="2" onclick="addToScreen(this.value)">2</button>
+        <button value="3" onclick="addToScreen(this.value)">3</button>
+        <button value="+" onclick="addToScreen(this.value)">+</button>
+        <br/>
+        <button onclick="tan()">tan</button>
+        <button onclick="piNumber()">PI</button>
+        <button value="4" onclick="addToScreen(this.value)">4</button>
+        <button value="5" onclick="addToScreen(this.value)">5</button>
+        <button value="6" onclick="addToScreen(this.value)">6</button>
+        <button value="-" onclick="addToScreen(this.value)">-</button>
+        <br/>
+        <button onclick="ln()">ln</button>
+        <button onclick="eNumber()">e</button>
+        <button value="7" onclick="addToScreen(this.value)">7</button>
+        <button value="8" onclick="addToScreen(this.value)">8</button>
+        <button value="9" onclick="addToScreen(this.value)">9</button>
+        <button value="*" onclick="addToScreen(this.value)">x</button>
+        <br/>
+        <button onclick="random()">Ran</button>
+        <button onclick="expNumber()">exp</button>
+        <button value="0" onclick="addToScreen(this.value)">0</button>
+        <button value="." onclick="addToScreen(this.value)">.</button>
+        <button onclick="calc()">=</button>
+        <button value="/" onclick="addToScreen(this.value)">/</button>
+
+    </div>
+</body>
+</html>
