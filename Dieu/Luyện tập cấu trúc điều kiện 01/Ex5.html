@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex5</title>
+</head>
+<body>
+    <script>
+        //Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+        let dKiemTra = parseFloat(prompt('Mời nhập điểm kiểm tra'));
+        let dThiGiuaKy =   parseFloat(prompt('Mời nhập điểm thi giữa kỳ'));
+        let dThiCuoiKy =   parseFloat(prompt('Mời nhập điểm thi cuối kỳ'));
+        let tb = (dKiemTra + dThiGiuaKy*2 + dThiCuoiKy*2)/5;
+        if (tb> 10 || tb < 0 )
+            alert("Bạn đã nhập sai điểm, mời làm lại");
+        else if (tb >= 9)
+            alert("Bạn được loại giỏi");
+        else if (tb >= 7)
+            alert('Bạn được loại khá');
+        else if(tb>=5)
+            alert('Bạn được lạoi trung binh');
+        else if (tb>=3)
+            alert('Bạn được loại yếu');
+        else
+            alert('Bạn được loại kém');
+
+    </script>
+</body>
+</html>

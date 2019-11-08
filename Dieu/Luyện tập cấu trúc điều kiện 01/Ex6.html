@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EX6</title>
+</head>
+<body>
+<!--Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được. Với mức hoa hồng theo doanh số bán hàng như sau:-->
+<!--5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.-->
+<!--10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.-->
+<!--20 % nếu tổng doanh số là lớn hơn 300 triệu.-->
+    <script>
+        let sales = parseFloat(prompt("mời nhập doanh số tháng này (đơn vị triệu đồng) "));
+        let commission = 0;
+        if (sales > 300)
+            commission = sales * 0.2;
+        else if( sales > 100 )
+            commission = sales* 0.1;
+        else if (sales >0)
+            commission = sales*0.05;
+        else
+            commission = 'không xác định được bạn được bao nhiêu';
+        alert(commission + ' triệu ');
+    </script>
+</body>
+</html>

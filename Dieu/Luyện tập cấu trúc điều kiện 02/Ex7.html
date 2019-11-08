@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("mời nhập số a của pt bậc 2:  a* x2 + b*x + c = 0" ));
+        let b = parseFloat(prompt("mời nhập số b của pt bậc 2:  a* x2 + b*x + c = 0 " ));
+        let c = parseFloat(prompt("mời nhập số c của pt bậc 2:  a* x2 + b*x + c = 0 " ));
+        if (a ===0){
+            if ( b ===0 ) {
+                if (c ===0)
+                    alert("Phương trình có vô số nghiệm ");
+                else
+                    alert("Phương trình vô nghiệm");
+            }
+            else {
+                let x = (-c) / b;
+                alert('Nghiệm phương trình là ' + x);
+            }
+        }
+        else {
+            let delta = Math.pow(b,2) - 4*a*c;
+            if (delta < 0)
+                alert('phương trình vô nghiệm');
+            else if (delta === 0) {
+                let x = (-b)/(2*a);
+                alert("Phương trình có nghiệm kép x = " +x);
+            }
+            else {
+                let x1 = (-b + Math.sqrt(delta) )/(2*a);
+                let x2 = (-b - Math.sqrt(delta) )/(2*a);
+                alert("phương trinh có 2 nghiệm là " + x1 + " và " + x2);
+
+            }
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

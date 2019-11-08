@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex7</title>
+</head>
+<body>
+<!--Viết chương trình để tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:-->
+<!--Phí thuê bao bắt buộc là 25 nghìn.-->
+<!--600 đồng cho mỗi gọi của 50 phút đầu tiên.-->
+<!--400 đồng cho mỗi phút gọi của 150 phút tiếp theo.-->
+<!--200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.-->
+    <script>
+        let number = parseFloat(prompt("Mời nhập số phút điện thoại gia đình bạn dùng trong tháng"));
+        if (number < 0 )
+            alert("có lỗi, mời nhập lại");
+        else {
+            let cost;
+            if (number <50)
+                cost = number*600 +25000;
+            else if (number <150)
+                cost = 50*600 + 25000 + (number - 50)*400;
+            else
+                cost = 50*600 + 25000 + 150* 400 + (number - 200)*200;
+            alert('Cước điện thoại của bạn tháng này là '+cost +'đ');
+        }
+    </script>
+</body>
+</html>

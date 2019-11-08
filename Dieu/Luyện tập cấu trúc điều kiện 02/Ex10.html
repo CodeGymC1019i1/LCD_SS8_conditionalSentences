@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<!--Viết chương trình tính tiền điện gồm các khoảng sau:-->
+<!--Tiền thuê bao điện kế: 1000đ/tháng-->
+<!--Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW-->
+<!--Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW-->
+<!--Nếu 50KW < phần vượt định mức < 100KW thì tính giá 700đ/KW-->
+<!--Nếu phần vượt định mức >= 100KW thì tính giá 900đ/KW-->
+<!--Chỉ số mới và cũ được nhập vào từ bàn phím-->
+<!--In ra màn hình chỉ số cũ, chỉ số mới,  tổng tiền-->
+<!--phải trả.-->
+     <script>
+         let soDienCu = parseFloat(prompt("Mời nhập số điện cũ "));
+         let soDienMoi = parseFloat(prompt("Mời nhập số điện mới "));
+         let tong = soDienMoi -soDienCu;
+         if (tong < 0 )
+             alert("có lỗi, mời nhập lại");
+         else {
+             let cost;
+             if (tong < 50)
+                 cost = tong*230 +1000;
+             else if (tong <100)
+                 cost = 1000 + tong*480;
+             else if (tong < 150)
+                 cost = 1000 + tong*700;
+             else
+                 cost = 1000 + tong*900;
+             alert('Tiền điện  của bạn tháng này là '+cost +'đ');
+         }
+
+     </script>
+</body>
+</html>
