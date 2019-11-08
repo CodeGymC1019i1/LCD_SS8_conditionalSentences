@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me?</title>
+</head>
+<body>
+<h2 style="position: absolute; left: 500px; top: 500px">Do you love me?</h2>
+<button style="position: absolute; left: 490px; top: 560px" onclick="yesYouLoveMe();">Yes, why not?</button>
+<button style="position: absolute; left: 600px; top: 560px;" id="btnNo" onmouseover="mouseOver();">NOOOO</button>
+<script>
+    function mouseOver() {
+        var x = Math.round(Math.random()*window.innerWidth);
+        var y = Math.round(Math.random()*window.innerHeight);
+        document.getElementById('btnNo').style.left = x +'px';
+        document.getElementById('btnNo').style.top = y +'px';
+    }
+    function yesYouLoveMe() {
+        alert('Yessss, I love you too!!!')
+    }
+</script>
+</body>
+</html>
