@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testmaytinh</title>
+    <link rel="stylesheet" href="tesmaytinh.css">
+</head>
+<body>
+<form>
+    <input type="text" id="result">
+    <br>
+    <input type="button" value="1" class="tothe" onclick="result.value+=this.value">
+    <input type="button" value="2" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="3" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="4" class="tothe"onclick="result.value+=this.value">
+    <br>
+    <input type="button" value="5" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="6" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="7" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="8" class="tothe"onclick="result.value+=this.value">
+    <br>
+    <input type="button" value="9" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="C" class="tothe"onclick="xoahet()">
+    <input type="button" value="=" class="tothe"onclick="ketqua()">
+    <input type="button" value="<-" class="tothe"onclick="xoatungcai()">
+    <Br>
+    <input type="button" value="/" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="+" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="-" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="*" class="tothe"onclick="result.value+=this.value">
+    <br>
+    <input type="button" value="0" style="width: 217px" class="tothe"onclick="result.value+=this.value">
+    <input type="button" value="sqr" class="tothe"onclick="can2()">
+    <input type="button" value="pow" class="tothe"onclick="binhphuong()">
+<script>
+    let screen=document.getElementById('result');
+    function ketqua() {
+        let hienthi=eval(screen.value);
+        screen.value=hienthi
+    }
+    function xoahet() {
+        screen.value="";
+
+    }
+    function xoatungcai() {
+        let delete1=screen.value.substr(0,screen.value.length-1)
+        screen.value=delete1;
+    }
+    function can2() {
+        let canbac2=Math.sqrt(screen.value);
+        screen.value=canbac2;
+    }
+    function binhphuong() {
+        let mu2=Math.pow(screen.value,2);
+        screen.value=mu2;
+
+    }
+</script>
+</form>
+</body>
+</html>
