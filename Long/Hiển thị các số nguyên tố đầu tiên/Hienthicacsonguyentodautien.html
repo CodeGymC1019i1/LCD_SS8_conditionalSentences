@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let number=parseInt(prompt('Số số nguyên tố đầu tiên:'));
+    let count=0;
+    let N=2;
+    let i=2;
+    function kiem_tra_snt(){
+        var flag = true;
+        if (N < 2){
+            flag = false;
+        }
+        else{
+            for (var i = 2; i < N-1; i++)
+            {
+                if (N % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true){
+            document.write(N + " là số nguyên tố <br/>");
+             count++;
+
+        }
+
+    }
+    for (count;count<number;N++){
+        kiem_tra_snt()
+    }
+
+
+
+</script>
+</body>
+</html>
