@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>In ra n số nguyên tố đầu tiên</title>
+    <script src="prime.js"></script>
 </head>
 <body>
     <script>
@@ -11,15 +12,8 @@
         let N = 2;
         document.write("Các số nguyên tố là:  ");
         while (count < numbers) {
-            let f= true;
 
-            for (let i = 2; i < N; i++) {
-                    if (N % i === 0) {
-                        f = false;
-                        break;
-                    }
-             }
-            if (f) {
+            if (checkPrime(N)) {
                     document.write(N + "  ");
                     count++;
             }
