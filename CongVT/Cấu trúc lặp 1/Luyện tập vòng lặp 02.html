@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 2</title>
+</head>
+<body>
+Bài 1: In dãy Finonaci
+
+Bài 2: Tính giai thừa của một số nguyên dương
+
+Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau <br>
+
+<script>
+    let n = parseInt(prompt('Nhập độ dài cạnh vuông của tam giác'));
+    //tam giác xuôi
+    for(let i=0;i<n;i++) {
+        for(j=0;j<=i;j++) {
+            document.writeln(" * ")
+        }
+        document.writeln("<br/>")
+    }
+
+
+
+
+    //Tam giác ngược
+    for(let i=n;i>=1;i--) {
+        for(let j=1;j<=i;j++) {
+            document.writeln(" * ");
+        }
+        document.writeln("<br/>");
+    }
+
+    //Tam giác xuôi bên phải
+    for(i=0;i<n;i++) {
+        for(j=0;j<=i;j++) {
+            document.writeln(" * ")
+        }
+        document.writeln("<br/>")
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
