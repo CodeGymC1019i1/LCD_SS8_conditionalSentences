@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In ra n số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        let numbers = parseInt(prompt("Nhập số nguyên tố cần in  "));
+        let count = 0;
+        let N = 2;
+        document.write("Các số nguyên tố là:  ");
+        while (count < numbers) {
+            let f= true;
+
+            for (let i = 2; i < N; i++) {
+                    if (N % i === 0) {
+                        f = false;
+                        break;
+                    }
+             }
+            if (f) {
+                    document.write(N + "  ");
+                    count++;
+            }
+            N++;
+
+        }
+    </script>
+</body>
+</html>
