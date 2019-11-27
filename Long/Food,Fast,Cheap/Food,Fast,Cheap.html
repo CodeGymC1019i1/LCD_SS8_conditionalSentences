@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FFC</title>
+</head>
+<body>
+<h3>Good - Fast - Cheap</h3>
+<input name="good" value="0" type="checkbox" id="good" onclick="goodFastCheap(this.id)" />
+Good
+<br/>
+<input name="fast" value="0" type="checkbox" id="fast" onclick="goodFastCheap(this.id)" />
+Fast
+<br/>
+<input name="cheap" value="0" type="checkbox" id="cheap" onclick="goodFastCheap(this.id)"/>
+
+Cheap
+<script>
+    function goodFastCheap(id) {
+        let good = document.getElementById("good");
+        let fast = document.getElementById("fast");
+        let cheap = document.getElementById("cheap");
+        switch (id) {
+            case "good":
+                if (good.checked ) {
+                    if (fast.checked) {
+                        cheap.checked = false;
+                    }
+                }
+            case "fast":
+                if (fast.checked ) {
+                    if (cheap.checked)
+                        good.checked = false;
+                }
+            case "cheap":
+                if (cheap.checked ) {
+                    if (good.checked) {
+                        fast.checked = false;
+                    }
+                }
+        }
+        document.getElementById("cheap").checked = cheap.checked;
+        document.getElementById("good").checked = good.checked;
+        document.getElementById("fast").checked = fast.checked;
+    }
+</script>
+</body>
+</html>

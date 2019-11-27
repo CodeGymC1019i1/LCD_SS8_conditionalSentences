@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let markTest = parseInt(prompt('Điểm bài kiểm tra'));
+    let markMid = parseInt(prompt('Điểm bài thi giữa kỳ'));
+    let markFinal = parseInt(prompt('Điểm bài thi cuối kỳ'));
+    let result = (markTest+markFinal+markMid)/3;
+    if (result>=80) alert('Loại A');
+    if (result>=60 && result<80) alert('Loại B');
+    if (result>=40 && result<60) alert('Loại C');
+    if (result>=20 && result<40) alert('Loại D');
+    if (result>=0 && result<20) alert('Loại E');
+</script>
+</body>
+</html>

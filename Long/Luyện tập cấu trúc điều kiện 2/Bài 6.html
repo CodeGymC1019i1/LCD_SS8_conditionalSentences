@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("mời nhập số a của pt bậc 1 a* x + b = 0" ));
+    let b = parseFloat(prompt("mời nhập số b của pt bậc 1 a* x + b = 0" ));
+    let x;
+    if ( a ===0 ) {
+        if (b ===0)
+            alert("Phương trình có vô số nghiệm ");
+        else
+            alert("Phương trình vô nghiệm");
+    }
+    else {
+        x = (-b)/a;
+        alert('Nghiệm phương trình là '+x);
+    }
+</script>
+</body>
+</html>

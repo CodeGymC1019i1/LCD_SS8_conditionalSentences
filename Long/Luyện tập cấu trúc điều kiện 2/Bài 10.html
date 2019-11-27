@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+    <script>
+    let soDienCu = parseFloat(prompt("Mời nhập số điện cũ "));
+    let soDienMoi = parseFloat(prompt("Mời nhập số điện mới "));
+    let tong = soDienMoi -soDienCu;
+    if (tong < 0 )
+        alert("có lỗi, mời nhập lại");
+    else {
+        let cost;
+        if (tong < 50)
+            cost = tong*230 +1000;
+        else if (tong <100)
+            cost = 1000 + tong*480;
+        else if (tong < 150)
+            cost = 1000 + tong*700;
+        else
+            cost = 1000 + tong*900;
+        alert('Tiền điện  của bạn tháng này là '+cost +'đ');
+    }
+</script>
+</body>
+</html>
